@@ -1,1 +1,1 @@
-worker: DEBUG=* index.js
+worker: npm start
