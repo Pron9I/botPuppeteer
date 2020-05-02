@@ -16,7 +16,8 @@ var tunnel = require('tunnel');
 const Markup = require('telegraf/markup');
 
 const bot = new Telegraf(
-    process.env.BOT_TOKEN, { telegram: { agent: socksAgent } }
+    process.env.BOT_TOKEN
+    // , { telegram: { agent: socksAgent } }
 );
 
 function ATIparse(cityLoad, radLoad) {
@@ -75,6 +76,7 @@ let unloadCity;
 let parsing;
 let message;
 let time;
+
 bot.hears('Закончить поиск', (ctx) => {
     // clearInterval(parsing); clearInterval(message);
     ctx.reply('Поиск завершен. Для дальнешего использования введи: "[ГОРОД] [РАССТОЯНИЕ]"');

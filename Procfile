@@ -1,0 +1,1 @@
+worker: DEBUG=* index.js
