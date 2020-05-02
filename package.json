@@ -1,0 +1,33 @@
+{
+  "name": "botpuppeteer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pron9I/botPuppeteer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pron9I/botPuppeteer/issues"
+  },
+  "homepage": "https://github.com/Pron9I/botPuppeteer#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "https-proxy-agent": "^5.0.0",
+    "puppeteer": "^3.0.2",
+    "socks-proxy-agent": "^5.0.0",
+    "socks5-http-client": "^1.0.4",
+    "socks5-https-client": "^1.2.1",
+    "telegraf": "^3.38.0",
+    "tunnel": "0.0.6"
+  },
+  "devDependencies": {
+    "bufferutil": "^4.0.1",
+    "utf-8-validate": "^5.0.2"
+  }
+}
