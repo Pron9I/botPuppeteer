@@ -17,7 +17,7 @@ const Markup = require('telegraf/markup');
 
 const bot = new Telegraf(
     process.env.BOT_TOKEN
-    // , { telegram: { agent: socksAgent } }
+    , { telegram: { agent: socksAgent } }
 );
 
 function ATIparse(cityLoad, radLoad) {
