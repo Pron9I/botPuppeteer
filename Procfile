@@ -1,1 +1,1 @@
-worker: DEBUG=*--server-args="-screen 0 1024x768x24" node --harmony index.js
+worker: DEBUG=*--server-args="-screen 0 1024x768x24" node index.js
