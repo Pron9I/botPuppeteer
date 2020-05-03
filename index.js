@@ -112,13 +112,13 @@ bot
         )
     )
     .on('text', (ctx) => {
+        unloadCity = 'начало';
+        time = 'начало';
         pars = setInterval(() => {
             (async () => {
                 try {
                     const data = ctx.message.text.split(' ');
                     let newReq = {};
-                    unloadCity = 'начало';
-                    time = 'начало';
                     newReq = await ATIparse(data[0], data[1]);
                     if (newReq.unloadCity != unloadCity || newReq.time != time || unloadCity === 'начало') {
                         ctx.reply(
