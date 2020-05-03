@@ -112,21 +112,24 @@ bot
         )
     )
     .on('text', (ctx) => {
-        // pars = setInterval(() => {
-        (async () => {
-            try {
-                const data = ctx.message.text.split(' ');
-                let newReq = {};
-                unloadCity = 'начало';
-                time = 'начало';
-                newReq = await ATIparse(data[0], data[1]);
-                ctx.reply(
-                    `Город загрузки: ${newReq.loadCity}\nГород выгрузки: ${newReq.unloadCity}\nРасстояние: ${newReq.distance}\nДата загрузки: ${newReq.loadDate}\nНал: ${newReq.cash}\nБез НДС: ${newReq.noNds}`,
-                    Markup.keyboard(['Закончить поиск']).oneTime().resize().extra()
-                );
-            } catch (e) { console.log(e) }
-        })()
-        // }, 30000)
+        pars = setInterval(() => {
+            (async () => {
+                try {
+                    const data = ctx.message.text.split(' ');
+                    let newReq = {};
+                    unloadCity = 'начало';
+                    time = 'начало';
+                    newReq = await ATIparse(data[0], data[1]);
+                    if (newReq.unloadCity != unloadCity || newReq.time != time || unloadCity === 'начало') {
+                        ctx.reply(
+                            `Город загрузки: ${newReq.loadCity}\nГород выгрузки: ${newReq.unloadCity}\nРасстояние: ${newReq.distance}\nДата загрузки: ${newReq.loadDate}\nНал: ${newReq.cash}\nБез НДС: ${newReq.noNds}`,
+                            Markup.keyboard(['Закончить поиск']).oneTime().resize().extra()
+                        )
+                    };
+                    if (newReq.unloadCity != undefined) { unloadCity = newReq.unloadCity; time = newReq.time };
+                } catch (e) { console.log(e) }
+            })()
+        }, 30000)
     });
 
 
