@@ -24,7 +24,7 @@ async function ATIparse(cityLoad, radLoad) {
         const puppeteer = require('puppeteer');
         async function parse() {
             try {
-                const browser = await puppeteer.launch();
+                const browser = await puppeteer.launch({ 'args': ['--no-sandbox', '--disable-setuid-sandbox'] });
                 const page = await browser.newPage();
                 await page.goto('https://loads.ati.su/');
                 await page.type('#weightTo', '11', { delay: 0 });
