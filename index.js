@@ -96,9 +96,9 @@ async function ATIparse(cityLoad, radLoad) {
     }
 }
 
-let unloadCity;
 let pars;
-let time;
+let unloadCity = 'начало';
+let time = 'начало';
 
 bot.hears('Закончить поиск', (ctx) => {
     clearInterval(pars);
@@ -112,8 +112,6 @@ bot
         )
     )
     .on('text', (ctx) => {
-        unloadCity = 'начало';
-        time = 'начало';
         pars = setInterval(() => {
             (async () => {
                 try {
