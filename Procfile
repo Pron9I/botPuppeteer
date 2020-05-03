@@ -1,1 +1,1 @@
-worker: npm start
+worker: DEBUG=*--server-args="-screen 0 1024x768x24" node --harmony index.js
