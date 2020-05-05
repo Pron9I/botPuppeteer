@@ -150,7 +150,7 @@ bot
                     if (newReq.unloadCity != undefined) { unloadCity = newReq.unloadCity; time = newReq.time };
                 } catch (e) { console.log(e) }
             })()
-        }, 30000)
+        }, 45000)
     });
 
 
