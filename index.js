@@ -145,7 +145,7 @@ bot
                     newReq = await ATIparse(data[0], data[1], data[2]);
                     if (newReq.unloadCity != unloadCity || newReq.time != time || unloadCity === 'начало') {
                         ctx.reply(
-                            `Город загрузки: ${newReq.loadCity}\nГород выгрузки: ${newReq.unloadCity}\nРасстояние: ${newReq.distance}\nДата загрузки: ${newReq.loadDate}\nНал: ${newReq.cash}\nБез НДС: ${newReq.noNds}`,
+                            `Добавлено: ${newReq.time}\nГород загрузки: ${newReq.loadCity}\nГород выгрузки: ${newReq.unloadCity}\nРасстояние: ${newReq.distance}\nДата загрузки: ${newReq.loadDate}\nНал: ${newReq.cash}\nБез НДС: ${newReq.noNds}`,
                             Markup.keyboard(['Закончить поиск']).oneTime().resize().extra()
                         )
                     };
