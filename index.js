@@ -80,7 +80,6 @@ async function ATIparse(cityLoad, radLoad, rate) {
                             i++;
                         }
                     }
-                    if (i = 10) i = 0;
                     return Promise.resolve(i);
                 }, rate);
                 console.log(row);
