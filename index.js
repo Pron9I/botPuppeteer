@@ -84,6 +84,7 @@ async function ATIparse(cityLoad, radLoad, rate) {
                     return Promise.resolve(i);
                 }, rate);
                 console.log(row);
+                if (i = 10) i = 0;
                 let result = {};
                 await page.evaluate((row) => { time = document.querySelectorAll('.grid-body .grid-row')[row].querySelector('.load-date-cell span b').innerText; return time }, row)
                     .then((time => { result.time = time; console.log(time) }))
