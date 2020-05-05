@@ -26,6 +26,7 @@ async function ATIparse(cityLoad, radLoad, rate) {
             try {
                 const browser = await puppeteer.launch({ 'args': ['--no-sandbox', '--disable-setuid-sandbox'] });
                 const page = await browser.newPage();
+                await page.setDefaultNavigationTimeout(0);
                 await page.goto('https://loads.ati.su/');
                 await page.type('#weightTo', '11', { delay: 0 });
                 await page.type('#volumeTo', '45', { delay: 0 });
